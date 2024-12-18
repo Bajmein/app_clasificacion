@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Diagnóstico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .result {
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+        }
+        .healthy {
+            color: #28a745;
+        }
+        .pneumonia {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h1>Resultado del Diagnóstico</h1>
+        <p class="{{ result|lower }}">{{ result }}</p>
+    </div>
+    <a href="{% url 'upload' %}">Volver a cargar otra imagen</a>
+</body>
+</html>
