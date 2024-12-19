@@ -45,6 +45,6 @@ def predict(request):
             outputs = model(image)
             _, predicted = torch.max(outputs, 1)
 
-        result = "Pneumonia" if predicted.item() == 1 else "Healthy"
+        result = "Pneumonia" if predicted.item() == 1 else "Saludable"
         return render(request, 'result.html', {'result': result})
     return render(request, 'upload.html')
