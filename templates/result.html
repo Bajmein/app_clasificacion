@@ -11,7 +11,7 @@
             padding: 20px;
             background-color: #f8f9fa;
         }
-        .result {
+        .resultado {
             padding: 20px;
             margin: 20px auto;
             border: 1px solid #ddd;
@@ -23,7 +23,7 @@
         h1 {
             color: #333;
         }
-        .healthy {
+        .saludable {
             color: #28a745;
         }
         .pneumonia {
@@ -32,9 +32,9 @@
     </style>
 </head>
 <body>
-    <div class="result">
+    <div class="resultado">
         <h1>Resultado del Diagnóstico</h1>
-        <p class="{{ result|lower }}">{{ result }}</p>
+        <p class="{{ resultado|lower }}">{{ resultado }}</p>
     </div>
     <a href="{% url 'upload' %}">Volver a cargar otra imagen</a>
 </body>

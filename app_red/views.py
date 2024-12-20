@@ -27,7 +27,6 @@ transform = transforms.Compose([
 
 
 def upload(request):
-    # Tu lógica para manejar la carga de imágenes
     return render(request, 'upload.html')
 
 
@@ -45,6 +44,6 @@ def predict(request):
             outputs = model(image)
             _, predicted = torch.max(outputs, 1)
 
-        result = "Pneumonia" if predicted.item() == 1 else "Saludable"
-        return render(request, 'result.html', {'result': result})
+        resultado = "Pneumonia" if predicted.item() == 1 else "Saludable"
+        return render(request, 'result.html', {'resultado': resultado})
     return render(request, 'upload.html')
